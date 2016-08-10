@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import once from 'lodash/once';
+
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+const tapInitOnce = once(() => injectTapEventPlugin());
+
 class App extends Component {
   render() {
+    tapInitOnce();
     return (
       <div className="App">
         <div className="App-header">
