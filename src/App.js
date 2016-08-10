@@ -4,6 +4,10 @@ import './App.css';
 
 import once from 'lodash/once';
 
+import {List, ListItem} from 'material-ui/List';
+
+import AppBar from 'material-ui/AppBar';
+
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 const tapInitOnce = once(() => injectTapEventPlugin());
@@ -12,15 +16,12 @@ class App extends Component {
   render() {
     tapInitOnce();
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <List>
+        <AppBar title="Quick proof-of-concept"/>
+        <ListItem primaryText="Item 1" />
+        <ListItem primaryText="Item 2" />
+        <img src={logo} className="App-logo" alt="logo"/>
+      </List>
     );
   }
 }
