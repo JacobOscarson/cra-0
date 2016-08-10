@@ -21,12 +21,14 @@ class App extends Component {
     tapInitOnce();
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(myTheme)}>
-        <List>
+        <div>
           <AppBar title="Quick proof-of-concept"/>
-          <ListItem primaryText="Item 1" />
-          <ListItem primaryText="Item 2" />
+          <List>
+            <ListItem primaryText="Item 1" />
+            <ListItem primaryText="Item 2" />
+          </List>
           <img src={logo} className="App-logo" alt="logo"/>
-        </List>
+        </div>
       </MuiThemeProvider>
     );
   }
